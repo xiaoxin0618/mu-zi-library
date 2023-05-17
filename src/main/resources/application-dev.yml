@@ -1,0 +1,13 @@
+server:
+  port: 9095  #启动端口号
+spring:
+  datasource:   #数据库配置
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mzlibrary?serverTimezone=GMT%2B8
+    username: root
+    password: root
+mybatis-plus:
+  mapper-locations: classpath:mybatis/*.xml   #mybatis-plus xml文件存放地址
+  configuration:
+    map-underscore-to-camel-case: true   #开启驼峰下划线自动转换
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  #mybatis-plus 控制台sql语句输出
